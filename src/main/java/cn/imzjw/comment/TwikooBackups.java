@@ -133,6 +133,8 @@ public class TwikooBackups {
      * @return post 请求
      */
     private static HttpPost getPost(String password, String twikooUrl, JSONObject jsonBody) {
+        System.out.println("PASSWORD: " + password);
+        System.out.println("TWIKOO_URL: " + twikooUrl);
         getParamMap(toMD5(password)).forEach(jsonBody::put);
         HttpPost post = new HttpPost(twikooUrl);
         // 设置请求体
