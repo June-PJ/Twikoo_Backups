@@ -70,6 +70,8 @@ public class TwikooBackups {
      * @param args 参数
      */
     public static void main(String[] args) {
+        System.out.println("PASSWORD: " + args[0]);
+        System.out.println("TWIKOO_URL: " + args[1]);
         if (args.length == 0) {
             LOGGER.warn("请在 Secrets 中填写 PASSWORD 和 TWIKOO_URL...");
         }
