@@ -35,6 +35,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add /home/runner/work/comment_backups/comment_backups/twikoo-comment.json
+          git add /home/runner/work/Twikoo_Backups/Twikoo_Backups/twikoo-comment.json
           git commit -m "Add twikoo-comment.json" || echo "No changes to commit"
           git push
