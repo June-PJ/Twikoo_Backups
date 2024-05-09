@@ -70,11 +70,11 @@ public class TwikooBackups {
      * @param args 参数
      */
     public static void main(String[] args) {
-        System.out.println("PASSWORD: " + args[0]);
-        System.out.println("TWIKOO_URL: " + args[1]);
         if (args.length == 0) {
             LOGGER.warn("请在 Secrets 中填写 PASSWORD 和 TWIKOO_URL...");
         }
+        System.out.println("PASSWORD: " + args[0] + "length: " + args[0].length());
+        System.out.println("TWIKOO_URL: " + args[1] + "length: " + args[0].length());
         if (args.length == 2) {
             requestTwikoo(args[0], args[1]);
         } else {
@@ -133,8 +133,6 @@ public class TwikooBackups {
      * @return post 请求
      */
     private static HttpPost getPost(String password, String twikooUrl, JSONObject jsonBody) {
-        System.out.println("PASSWORD: " + password);
-        System.out.println("TWIKOO_URL: " + twikooUrl);
         getParamMap(toMD5(password)).forEach(jsonBody::put);
         HttpPost post = new HttpPost(twikooUrl);
         // 设置请求体

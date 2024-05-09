@@ -29,12 +29,7 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           TWIKOO_URL: ${{ secrets.TWIKOO_URL }}
         run: |
-          echo "PASSWORD: $PASSWORD" > params.txt
-          echo "TWIKOO_URL: $TWIKOO_URL" >> params.txt
           mvn compile exec:java -Dexec.mainClass="cn.imzjw.comment.TwikooBackups" -Dexec.args="${PASSWORD} ${TWIKOO_URL}"
-
-      - name: Print Parameters
-        run: cat params.txt
 
       - name: Commit and push
         run: |
