@@ -73,8 +73,6 @@ public class TwikooBackups {
         if (args.length == 0) {
             LOGGER.warn("请在 Secrets 中填写 PASSWORD 和 TWIKOO_URL...");
         }
-        System.out.println("PASSWORD: " + args[0] + "length: " + args[0].length());
-        System.out.println("TWIKOO_URL: " + args[1] + "length: " + args[0].length());
         if (args.length == 2) {
             requestTwikoo(args[0], args[1]);
         } else {
